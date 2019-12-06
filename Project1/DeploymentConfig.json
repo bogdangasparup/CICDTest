@@ -54,7 +54,7 @@
 	},
     {
 	  "name": "MyQueue2",
-	  "description": "Description for MyQueue2 ",
+	  "description": "Description for MyQueue2",
 	  "uniqueref": false,
 	  "autoretry": true,
 	  "maxretry": 1
