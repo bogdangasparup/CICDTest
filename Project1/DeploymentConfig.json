@@ -1,0 +1,63 @@
+{
+  "name": "Enhanced-REFramework1",
+  "environment": "first",
+  "folder": "Second",
+  "assets": [
+    {
+	  "name": "TextAsset",
+	  "type": "Text",
+	  "value": "ValueForTextAsset",
+	  "robots": []
+	},
+    {
+	  "name": "IntAsset",
+	  "type": "Int",
+	  "value": "111",
+	  "robots": []
+	},
+    {
+	  "name": "BoolAsset",
+	  "type": "Bool",
+	  "value": "True",
+	  "robots": []
+	},
+    {
+	  "name": "CredAsset",
+	  "type": "Credential",
+	  "user": "username1",
+	  "password": "**********",
+	  "robots": []
+	},
+    {
+	  "name": "PerRobotAsset",
+	  "type": "Text",
+	  "value": "",
+	  "robots": [
+	    {
+		  "name":"robot1",
+		  "value":"value1"
+		},
+	    {
+		  "name":"robot2",
+		  "value":"value2"
+		}
+	  ]
+	}
+  ],
+  "queues": [
+    {
+	  "name": "MyQueue1",
+	  "description": "Description for MyQueue1",
+	  "uniqueref": false,
+	  "autoretry": false,
+	  "maxretry": 2
+	},
+    {
+	  "name": "MyQueue2",
+	  "description": "Description for MyQueue2",
+	  "uniqueref": false,
+	  "autoretry": true,
+	  "maxretry": 1
+	}
+  ]
+}
