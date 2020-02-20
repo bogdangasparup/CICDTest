@@ -42,6 +42,38 @@
 		  "value":"value2"
 		}
 	  ]
+	},
+    {
+	  "name": "PerRobotBool",
+	  "type": "Bool",
+	  "value": "",
+	  "robots": [
+	    {
+		  "name":"robot1",
+		  "value":"true"
+		},
+	    {
+		  "name":"robot2",
+		  "value":"false"
+		}
+	  ]
+	},
+    {
+	  "name": "PerRobotCred",
+	  "type": "Credential",
+	  "value": "",
+	  "robots": [
+	    {
+		  "name":"robot1",
+		  "user":"user1",
+		  "password":"password1"
+		},
+	    {
+		  "name":"robot2",
+		  "user":"user2",
+		  "password":"password2"
+		}
+	  ]
 	}
   ],
   "queues": [

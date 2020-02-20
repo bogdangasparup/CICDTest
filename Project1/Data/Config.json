@@ -1,0 +1,16 @@
+{	
+	"SAPConfig":
+	{
+		"LoginScreen": "SomeText",
+		
+		"BoolValue": {"Asset": "BoolValue", "DefaultValue": true},
+		"DelayMS": {"Asset": "DelayMS", "DefaultValue": 3000},
+		"TransactionCode": {"Asset": "SAPTransactionCode", "DefaultValue": "1234"},
+		
+		"CredentialAssetName": {"Credential": "SAPCredential2"},
+		
+		"SAPQueueName": {"Queue": "SAPQueue", "RetryNumber": 2, "UniqueRef": true, "Description": ""}
+	}
+	
+	
+}
