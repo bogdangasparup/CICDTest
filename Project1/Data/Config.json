@@ -8,6 +8,7 @@
 		"TransactionCode": {"Asset": "SAPTransactionCode", "DefaultValue": "1234"},
 		"SAPEnvironment": {"Asset": "SAPEnvironment", "DefaultValue": "LH1"},
 		
+
 		"CredentialAssetName": {"Credential": "SAPCredential2"},
 		
 		"SAPQueueName": {"Queue": "SAPQueue", "RetryNumber": 2, "UniqueRef": true, "Description": ""}
