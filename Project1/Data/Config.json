@@ -6,6 +6,7 @@
 		"BoolValue": {"Asset": "BoolValue", "DefaultValue": true},
 		"DelayMS": {"Asset": "DelayMS", "DefaultValue": 3000},
 		"TransactionCode": {"Asset": "SAPTransactionCode", "DefaultValue": "1234"},
+		"SAPEnvironment": {"Asset": "SAPEnvironment", "DefaultValue": "LH1"},
 		
 		"CredentialAssetName": {"Credential": "SAPCredential2"},
 		
