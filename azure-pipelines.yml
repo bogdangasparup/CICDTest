@@ -1,0 +1,45 @@
+# UiPath template pipeline
+
+resources:
+  repositories:
+  - repository: templates
+    type: git
+    name: PipelineTemplates
+
+variables:
+  System.Debug: true
+
+trigger:
+  branches:
+    include:
+    - master
+
+pool:
+  vmImage: windows-latest
+#  name: TestPool
+  
+stages:
+  - template: Templates/uipath.pack.and.deploy.yml@templates
+    parameters: 
+      # The name of the UiPath Project
+      ProjectName: SampleProcess
+      # Name of the service connection for the Development Orchestrator
+      QAOrchConnection: "QAOrchestrator"
+      # Name of the folder where the project is to be deployed in the Development Orchestrator
+      QAOrchFolder: "AzureDevopsDeployments"
+      # Name of the Devops environment for deployment to development
+      QAEnvironment: "QualityEnv"
+      # Dev Orchestrator URL - used for queue/schedule deployment
+      QAOrchUrl: "https://cloud.uipath.com/clientname/Quality/orchestrator_"
+      # Dev Orchestrator tenant - used for queue/schedule deployment
+      QAOrchTenant: "Quality"
+      # Name of the service connection for the Production Orchestrator
+      ProdOrchConnection: "ProductionOrchestrator"
+      # Name of the folder where the project is to be deployed in the Production Orchestrator
+      ProdOrchFolder: "AzureDevopsDeployments"
+      # Name of the Devops environment for deployment to Production
+      ProdEnvironment: "ProductionEnv"
+      # Prod Orchestrator URL - used for queue/schedule deployment
+      ProdOrchUrl: "https://cloud.uipath.com/clientname/Production/orchestrator_"
+      # Prod Orchestrator tenant - used for queue/schedule deployment
+      ProdOrchTenant: "Production"
