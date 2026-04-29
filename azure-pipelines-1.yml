@@ -1,0 +1,16 @@
+# Check outbound network reachability
+
+trigger:
+- master
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    Test-NetConnection -ComputerName horizons.jpl.nasa.gov -Port 6775
+    Test-NetConnection -ComputerName telehack.com -Port 23
+  displayName: 'Check outbound telnet reachability'
