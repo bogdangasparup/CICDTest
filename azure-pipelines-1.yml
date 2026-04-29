@@ -14,6 +14,7 @@ steps:
     Test-NetConnection -ComputerName horizons.jpl.nasa.gov -Port 6775
     Test-NetConnection -ComputerName telehack.com -Port 23
   displayName: 'Check outbound telnet reachability'
+  continueOnError: true
 
 - task: PowerShell@2
   inputs:
