@@ -10,16 +10,11 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: |
-    Test-NetConnection -ComputerName horizons.jpl.nasa.gov -Port 6775
-    Test-NetConnection -ComputerName telehack.com -Port 23
-  displayName: 'Check outbound telnet reachability'
-  continueOnError: true
-
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
     script: |
       Test-NetConnection -ComputerName horizons.jpl.nasa.gov -Port 6775
       Test-NetConnection -ComputerName telehack.com -Port 23
+      Test-NetConnection -ComputerName pub400 -Port 992
   displayName: 'Check outbound telnet reachability - PS'
